@@ -4,7 +4,7 @@ from visualisation import *
 
 def menu_settings(menu):
     # SETTINGS
-    menu.configure(bg="deep sky blue")
+    menu.configure(bg="lightgray")
     menu.title("MENU")
     menu.geometry("230x240")
 
@@ -20,7 +20,7 @@ def menu_buttons(menu):
 
 def menu_labels(menu):
     # INIT LABEL
-    Label(menu, text="Hello!", font=('Helvetica 20 bold'), bg="deep sky blue").grid(row=0, column=0, padx=0, pady=0)
+    Label(menu, text="Hello!", font=('Helvetica 20 bold'), bg="lightgray").grid(row=0, column=0, padx=0, pady=0)
 
 def menu_init():
     #INIT tk

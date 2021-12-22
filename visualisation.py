@@ -8,5 +8,3 @@ def gui_visualisation_creator():
     gui_vis.title("Visualisation")
     gui_vis.mainloop()
 
-def database_init():
-    gui_visualisation_creator()
