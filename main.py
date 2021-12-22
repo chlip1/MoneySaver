@@ -5,4 +5,4 @@ from database import *
 if __name__ == "__main__":
 
     menu_init()
-    gui_database_creator()
+    #gui_database_creator()
