@@ -6,4 +6,3 @@ if __name__ == "__main__":
     menu.configure(bg="deep sky blue")
     menu.title("MENU")
     menu.mainloop()
-    ###njkjkjkjjjjhhjjkhjjkjkjk
