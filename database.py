@@ -6,7 +6,7 @@ def init_database():
 
     try:
         #CREATE A DATABASE OR CONNECT TO ONE
-        conn = sqlite3.connect('name.db')
+        conn = sqlite3.connect('expenditures.db')
         c = conn.cursor()
 
         #CREATE TABLE
@@ -25,7 +25,7 @@ def init_database():
 
 def show_records():
 
-    conn = sqlite3.connect('name.db')
+    conn = sqlite3.connect('expenditures.db')
     c = conn.cursor()
 
     c.execute("SELECT *, oid FROM expenditures")
@@ -37,7 +37,7 @@ def show_records():
 
 def submit(amount, month_clicked, category_clicked, descriptions):
 
-    conn = sqlite3.connect('name.db')
+    conn = sqlite3.connect('expenditures.db')
     c = conn.cursor()
 
     c.execute("INSERT INTO expenditures VALUES(:amount, :month, :category, :descriptions)",{'amount': amount.get(),
