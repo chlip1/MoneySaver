@@ -11,7 +11,7 @@ def menu_settings(menu):
 def menu_buttons(menu):
     # INIT BUTTONS
     button_database = Button(menu, text="Add a expenditure", bg="gray", height=1, width=30, command=lambda: database_main(menu))
-    button_visualisation = Button(menu, text="Show past expenditures", bg="gray", height=1, width=30, command=gui_visualisation_creator)
+    button_visualisation = Button(menu, text="Show past expenditures", bg="gray", height=1, width=30, command=lambda: gui_visualisation_creator(menu))
     button_exit = Button(menu, text="EXIT", bg="gray", height=1, width=30, command=menu.quit)
 
     button_database.grid(row=1, column=0, padx=5, pady=2)

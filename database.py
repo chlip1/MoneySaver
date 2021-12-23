@@ -35,6 +35,11 @@ def show_records():
     conn.commit()
     conn.close()
 
+def db_close(gui_db):
+
+    gui_db.destroy()
+    menu_init()
+
 def submit(amount, month_clicked, category_clicked, descriptions):
 
     conn = sqlite3.connect('expenditures.db')
@@ -88,8 +93,8 @@ def gui_Functionalities(gui_db):
                            command=lambda: submit(amount, month_clicked, category_clicked, descriptions))
     button_submit.grid(row=8, column=0, padx=5, pady=2)
 
-    button_exit = Button(gui_db, text="Exit", bg="gray", height=1, width=15,
-                           command=gui_db.quit)
+    button_exit = Button(gui_db, text="Back", bg="gray", height=1, width=15,
+                           command=lambda: db_close(gui_db))
     button_exit.grid(row=9, column=0, padx=5, pady=2)
 
 def database_main(menu):
