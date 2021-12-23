@@ -10,7 +10,7 @@ def menu_settings(menu):
 
 def menu_buttons(menu):
     # INIT BUTTONS
-    button_database = Button(menu, text="Add a expenditure", bg="gray", height=3, width=30, command=database_init)
+    button_database = Button(menu, text="Add a expenditure", bg="gray", height=3, width=30, command=database_main)
     button_visualisation = Button(menu, text="Show past expenditures", bg="gray", height=3, width=30, command=gui_visualisation_creator)
     button_exit = Button(menu, text="EXIT", bg="gray", height=3, width=30, command=menu.quit)
 
