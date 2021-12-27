@@ -1,6 +1,9 @@
 from tkinter import *
 import sqlite3
+
+import database
 from main import *
+from database import *
 
 def show_expresion(gui_vis, expresion):
 
@@ -101,9 +104,13 @@ def gui_vis_Functionalities(gui_vis):
     button_monthly = Button(gui_vis, text="Summary monthly", bg="gray", height=1, width=25, padx=5, pady=5, command=lambda: show_monthly(gui_vis, month_clicked))
     button_per_category = Button(gui_vis, text="Summary per category", bg="gray", height=1, width=25, padx=5, pady=5, command=lambda: category_per_month(gui_vis, category_clicked))
 
+    button_exit = Button(gui_vis, text="Back", bg="gray", height=1, width=15,
+                         command=lambda: database.db_close(gui_vis))
+
     button_annually.grid(row=2, column=0)
     button_monthly.grid(row=5, column=0)
     button_per_category.grid(row=8, column=0)
+    button_exit.grid(row=9, column=0, padx=5, pady=2)
 
 def gui_visualisation_settings(gui_vis):
 
