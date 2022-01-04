@@ -80,7 +80,7 @@ def gui_Functionalities(gui_db):
     category_clicked.set("Food from restaurant")
 
     category = OptionMenu(gui_db, category_clicked, "Grocery shopping", "Food from restaurant", "Car fuel",
-                          "Car extra expenses", "Investments", "Gifts and loan", "Clothes", "House", "Subscription")
+                          "Car extra expenses", "Investments", "Gifts and loan", "Clothes", "House", "Subscription", "Extra")
     category.grid(row=3, column=0)
 
     amount = Entry(gui_db, width=30)
