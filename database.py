@@ -1,5 +1,5 @@
 from tkinter import *
-import main
+import MoneySaver
 import sqlite3
 
 def init_database():
@@ -27,7 +27,7 @@ def init_database():
 def db_close(gui_db):
 
     gui_db.destroy()
-    main.menu_init()
+    MoneySaver.menu_init()
 
 def submit(amount, month_clicked, category_clicked, descriptions):
     #ADDING A VARIABLE TO THE DATABASE

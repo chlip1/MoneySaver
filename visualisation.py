@@ -2,7 +2,7 @@ from tkinter import *
 import sqlite3
 import database
 import plots
-import main
+import MoneySaver
 
 def show_expresion(gui_vis, expresion):
     #SHOW RESULT OF EXPRESION
@@ -12,7 +12,7 @@ def show_expresion(gui_vis, expresion):
 def db_close(gui_vis):
 
     gui_vis.destroy()
-    main.menu_init()
+    MoneySaver.menu_init()
 
 def show_category_expenses(gui_vis, category_clicked):
     #CHOOSE EXPENSES FOR EACH MONTH FROM DATABASE AND SUM THEM
