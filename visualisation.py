@@ -5,6 +5,16 @@ import database
 from main import *
 from database import *
 
+from matplotlib import pyplot as plt
+
+def show_simple_plot():
+
+    dev_x = [25,26,27,28,29,30,31,32,33]
+    dev_y = [1000,132,324,1234,123,54,2132,12,54]
+
+    plt.plot(dev_x,dev_y)
+    plt.show()
+
 def show_expresion(gui_vis, expresion):
 
     result_label = Label(gui_vis, text=expresion)
