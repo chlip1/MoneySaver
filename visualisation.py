@@ -1,17 +1,14 @@
 from tkinter import *
 import sqlite3
-
 import database
 from main import *
 from database import *
-
 from matplotlib import pyplot as plt
 
 def create_list_per_category(dev_y):
 
     list_all = []
     dev_y.clear()
-    dev_y.append("0")
     conn = sqlite3.connect('expenditures.db')
     c = conn.cursor()
 
@@ -88,13 +85,16 @@ def show_category_bar():
 
     dev_x = ["Grocery", "Dinner", "Car fuel",
     "Car extra", "Investments", "Gifts", "Clothes", "House", "Subscription", "Extra"]
+
     dev_y = []
 
     create_list_per_category(dev_y)
+    plt.figure(figsize=(12, 6))
 
     plt.xlabel("Category")
     plt.ylabel("Amount")
     plt.title("Expenditures per category")
+
 
     plt.bar(dev_x, dev_y)
     plt.show()
@@ -106,7 +106,6 @@ def show_expresion(gui_vis, expresion):
 
 def category_per_month(gui_vis, category_clicked):
     list_all = []
-    # choose = month_clicked.get()
 
     choose = ("{}".format(category_clicked.get()),)
     conn = sqlite3.connect('expenditures.db')
@@ -149,7 +148,6 @@ def show_annually(gui_vis):
 def show_monthly(gui_vis, month_clicked):
 
     list_all= []
-    #choose = month_clicked.get()
 
     choose = ("{}".format(month_clicked.get()),)
     conn = sqlite3.connect('expenditures.db')
